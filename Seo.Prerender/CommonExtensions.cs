@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Seo.Prerender
+{
+    public static class CommonExtensions
+    {
+        public static bool IsBlank(this string str)
+        {
+            return str == null || str.Trim() == string.Empty;
+        }
+
+
+        public static bool IsNotBlank(this string str)
+        {
+            return str != null && str.Trim() != string.Empty;
+        }
+
+        public static bool IsNotEmpty<T>(this IEnumerable<T> list)
+        {
+            return list != null && list.Any();
+        }
+    }
+}
